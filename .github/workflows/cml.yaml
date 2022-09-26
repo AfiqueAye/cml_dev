@@ -18,12 +18,10 @@ jobs:
       - name: Test model
         run: |
           # Your ML workflow goes here
-          pip install opencv-contrib-python
-          pip install -r requirements.txt
+          #pip install opencv-contrib-python
+          #pip install -r requirements.txt
           python AgeGenderAPI.py 
           
-          echo "## Results from The Face" >> report.md
           cat results.txt >> report.md
-          
-          cml-send-comment report.md
+          cml comment create --publish report.md
           

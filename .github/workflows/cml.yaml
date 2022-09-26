@@ -18,8 +18,8 @@ jobs:
       - name: Test model
         run: |
           # Your ML workflow goes here
-          #pip install opencv-contrib-python
-          #pip install -r requirements.txt
+          pip install opencv-contrib-python
+          pip install -r requirements.txt
           python AgeGenderAPI.py 
           
           cat results.txt >> report.md

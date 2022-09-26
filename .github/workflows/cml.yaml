@@ -23,4 +23,4 @@ jobs:
           python AgeGenderAPI.py 
           
           echo "Results from The Face"
-          cat results.txt
+          cat results.txt >> report.md

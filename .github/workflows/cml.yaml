@@ -23,5 +23,5 @@ jobs:
           python AgeGenderAPI.py 
           
           cat results.txt >> report.md
-          cml comment create --publish report.md
+          cml-send-comment report.md
           

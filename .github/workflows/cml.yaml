@@ -22,5 +22,8 @@ jobs:
           pip install -r requirements.txt
           python AgeGenderAPI.py 
           
-          echo "Results from The Face"
+          echo "## Results from The Face" >> report.md
           cat results.txt >> report.md
+          
+          cml-send-comment report.md
+          

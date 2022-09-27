@@ -24,7 +24,7 @@ jobs:
           
           echo "## Results from The Face"
           cat results.txt >> report.md
-          cml send-comment report.md
+          cml comment create --publish report.md
           
 
           

@@ -22,7 +22,7 @@ jobs:
           pip install -r requirements.txt
           python AgeGenderAPI.py 
           
-          echo "## Model metrics" > report.md
-          cat results.txt >> report.md
-          cml send-comment report.md
+          echo "## Model metrics" 
+          cat results.txt 
+
           

@@ -18,15 +18,15 @@ jobs:
       - name: Train model
         run: |
           # Your ML workflow goes here
-          pip install opencv-contrib-python
-          pip install -r requirements.txt
-          python AgeGenderAPI.py
+          #pip install opencv-contrib-python
+          #pip install -r requirements.txt
+          #python AgeGenderAPI.py
       - name: Write CML report
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Your ML workflow goes here
-          cat results.txt >> report.md
+          cat hello.txt >> report.md
           cml-send-comment report.md
           
 

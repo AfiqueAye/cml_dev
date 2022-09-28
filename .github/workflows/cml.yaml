@@ -1,16 +1,14 @@
-name: CML
+name: model-wine-quality
 on: [push]
 jobs:
   run:
-    runs-on: windows-latest
-    container: docker://ghcr.io/iterative/cml:0-dvc2-base1
+    runs-on: [windows-latest]
+    container: docker://dvcorg/cml-py3:latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-      - name: Train model
+      - uses: actions/checkout@v2
+      - name: cml_run
         env:
-          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Your ML workflow goes here
           pip install opencv-contrib-python
